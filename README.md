@@ -3,11 +3,11 @@
 
 ![](https://i.imgur.com/ajsAujW.png)
 ## Demo
-[https://hsiangfeng.github.io/bmiCount/](https://hsiangfeng.github.io/bmiCount/)  
+[https://hsiangfeng.github.io/bmi-firebase/](https://hsiangfeng.github.io/bmi-firebase/) 
 
 ## 使用技術&練習技術
 - JavaScript
-- localStorage
+- Firebase
 - SCSS
 - Gulp
 - pug
