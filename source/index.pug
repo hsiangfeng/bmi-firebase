@@ -1,0 +1,30 @@
+extend layout/header.pug
+block content
+    .banner
+    .container
+        .row
+            .col-12.py-4
+                form(action="" id="form" class="bg-black")
+                    .form-row.w-100.d-flex.justify-content-center.align-items-center
+                        .col-md-4.form-group.d-flex.justify-content-center.align-items-center
+                            img(src="./images/BMICLogo.png", alt="", srcset="").img-fluid
+                        .col-md-4.form-group
+                            label(for="cm") 身高(CM)
+                            input.form-control(type="text", name="" id="cm" placeholder="177 CM")
+                            label(for="kg") 體重(KG)
+                            input.form-control(type="text", name="" id="kg" placeholder="50 KG")
+                            label(for="gender") 性別
+                            select.form-control(name="" id="gender")
+                                option(value="0" disabled) --請選擇性別--
+                                option(value="男") 男
+                                option(value="女") 女
+                        .col-md-4.form-group.d-flex.justify-content-center.align-items-center#btn-count
+                            a.result-btn.rounded-circle.d-flex.justify-content-center.align-items-center.flex-column.btn-original(href="#" )
+                                h4.m-0 結果
+                            
+            .col-12
+                .bg-black
+                    h3 歷史紀錄
+                    .bmiResultList
+    script(src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js")
+    script(src="js/all.js")
