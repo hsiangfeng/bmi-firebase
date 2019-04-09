@@ -99,9 +99,7 @@ gulp.task('watch', gulp.parallel('browser-sync', function () {
     gulp.watch('./source/js/*.js', gulp.series('babel'));
 }))
 
-gulp.task('bulid', gulp.series('clean', 'pug', 'sass', 'babel', 'image-min', function(done) {
-    done()
-}))
+gulp.task('bulid', gulp.series('clean', 'pug', 'sass', 'babel', 'image-min'))
 //4.0要加入gulp.series
 //default gulp
 gulp.task('default', gulp.series('pug', 'sass', 'babel', 'image-min', 'watch'))
