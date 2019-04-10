@@ -50,42 +50,47 @@ function bmiFu(e) {
 
 function btnColor(item, bmi) {
   var str = '';
+  var outer = '';
+  var btn = '';
 
   switch (item) {
     case '體重過輕':
-      str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column btn-primary-border\" href=\"#\">\n                        <h5 class=\"m-0\">".concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                        <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center bg-primary text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
-      btncountId.innerHTML = str;
+      outer = 'btn-primary-border';
+      btn = 'bg-primary';
       break;
 
     case '正常範圍':
-      str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column btn-success-border\" href=\"#\">\n                        <h5 class=\"m-0\">".concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                        <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center bg-success text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
-      btncountId.innerHTML = str;
+      outer = 'btn-success-border';
+      btn = 'bg-success';
       break;
 
     case '過重':
-      str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column btn-warning-border\" href=\"#\">\n                        <h5 class=\"m-0\">".concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                        <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center bg-warning text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
-      btncountId.innerHTML = str;
+      outer = 'btn-warning-border';
+      btn = 'bg-warning';
       break;
 
     case '輕度肥胖':
-      str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column btn-warning-border\" href=\"#\">\n                        <h5 class=\"m-0\">".concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                        <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center bg-warning text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
-      btncountId.innerHTML = str;
+      outer = 'btn-warning-border';
+      btn = 'bg-warning';
       break;
 
     case '中度肥胖':
-      str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column btn-danger-border\" href=\"#\">\n                        <h5 class=\"m-0\">".concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                        <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center bg-danger text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
-      btncountId.innerHTML = str;
+      outer = 'btn-danger-border';
+      btn = 'bg-danger';
       break;
 
     case '重度肥胖':
-      str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column btn-danger-border\" href=\"#\">\n                        <h5 class=\"m-0\">".concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                    <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center bg-danger text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
-      btncountId.innerHTML = str;
+      outer = 'btn-danger-border';
+      btn = 'bg-danger';
       break;
 
     default:
       console.log('生成按鈕錯誤');
       break;
   }
+
+  str += "<a class=\"result-btn rounded-circle d-flex justify-content-center align-items-center flex-column ".concat(outer, "\" href=\"#\">\n                        <h5 class=\"m-0\">").concat(item, "</h5>\n                        <small>BMI-").concat(bmi, "</small>\n                        <div class=\"rounded-circle btn-redo d-flex justify-content-center align-items-center ").concat(btn, " text-white\"><i class=\"fas fa-redo rounded-circle\"></i></div>\n                    </a>");
+  btncountId.innerHTML = str;
 }
 
 function analysisBMI(item) {
