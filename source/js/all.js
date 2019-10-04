@@ -2,7 +2,7 @@ const config = {
   apiKey: 'AIzaSyBcPs6BK07utWcbABZM6MPMe3jqA0QII4Q',
   authDomain: 'bmi-learn.firebaseapp.com',
   databaseURL: 'https://bmi-learn.firebaseio.com',
-  projectId: 'ㄖmi-learn',
+  projectId: 'bmi-learn',
   storageBucket: 'bmi-learn.appspot.com',
   messagingSenderId: '585806415748'
 }
